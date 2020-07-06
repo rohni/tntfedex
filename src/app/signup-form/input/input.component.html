@@ -1,0 +1,9 @@
+<div class="form-input">
+  <label>{{ label }}</label>
+  <ng-content></ng-content>
+  <ul class="errors" *ngIf="errors$ | async">
+    <li *ngFor="let error of errors$ | async" class="error">
+      {{ error }}
+    </li>
+  </ul>
+</div>
