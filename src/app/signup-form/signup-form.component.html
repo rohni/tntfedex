@@ -1,0 +1,62 @@
+<header>Free Delivery Signup Form</header>
+<form [formGroup]="form">
+  <form-input label="First name" [control]="form.controls.firstName">
+    <input
+      type="text"
+      formControlName="firstName"
+      name="firstName"
+      id="firstName"
+      placeholder="First name"
+      autocomplete="username"
+    />
+  </form-input>
+  <form-input label="Last name" [control]="form.controls.lastName">
+    <input
+      type="text"
+      formControlName="lastName"
+      name="surname"
+      id="surname"
+      placeholder="Surname"
+      autocomplete="username"
+    />
+  </form-input>
+  <form-input label="Email" [control]="form.controls.email">
+    <input
+      type="email"
+      formControlName="email"
+      name="email"
+      id="email"
+      placeholder="Email"
+      autocomplete="username"
+    />
+  </form-input>
+  <form-input label="Password" [control]="form.controls.password">
+    <input
+      type="password"
+      formControlName="password"
+      name="password"
+      id="password"
+      placeholder="Password"
+      autocomplete="new-password"
+    />
+  </form-input>
+  <form-input
+    label="Confirm password"
+    [control]="form.controls.passwordConfirm"
+  >
+    <input
+      type="password"
+      formControlName="passwordConfirm"
+      name="passwordConfirm"
+      id="passwordConfirm"
+      placeholder="Confirm Password"
+      autocomplete="new-password"
+    />
+  </form-input>
+  <div class="button-row">
+    <button type="submit" (click)="saveUser()" [disabled]="form.invalid">
+      Save
+    </button>
+    <button type="reset">Cancel</button>
+  </div>
+</form>
